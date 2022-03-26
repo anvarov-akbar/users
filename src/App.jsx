@@ -7,7 +7,7 @@ import UnauthenticatedApp from './components/Unauthendicatedpp/Unauthendicated';
 import useToken from './Hooks/useToken'
 
 function App() {
- const isLoggedIn = useToken();
+ const [isLoggedIn] = useToken();
 
  if(isLoggedIn){
 
