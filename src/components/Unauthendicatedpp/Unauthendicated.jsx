@@ -28,10 +28,10 @@ const UnauthenticatedApp = () =>{
     };
     return(
         <form onSubmit={handleSubmit}>
-      <input type='email' placeholder='email' />
+      <input type='email' placeholder='email' name='email' defaultValue={"eve.holt@reqres.in"} />
       <input
         placeholder='password'
-        type='password'
+        type='password'name='password'
       />
 
 
