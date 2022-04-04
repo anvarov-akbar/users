@@ -1,5 +1,6 @@
 
 import React from 'react'
+import Button from '@material-ui/core/Button';
 import useToken from '../../Hooks/useToken';
 
 const UnauthenticatedApp = () =>{
@@ -35,11 +36,11 @@ const UnauthenticatedApp = () =>{
       />
 
 
-      <button className='btn__submit' type='submit'>submit</button>
+      <Button type='onSubmit'variant="contained" color="primary" >Submit</Button>
       
     </form>
     );
 };
-
+    
 
 export default UnauthenticatedApp;

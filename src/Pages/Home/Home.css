@@ -1,0 +1,90 @@
+
+.home {
+  flex-grow: 1;
+  padding-bottom: 30px;
+  overflow: overlay;
+}
+
+.home::-webkit-scrollbar {
+    width: 8px;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+  }
+
+  /* Track */
+  .home::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  /* Handle */
+  .home::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+  }
+
+  /* Handle on hover */
+  .home::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+
+.home__top {
+  margin-bottom: 50px;
+}
+
+.home__top__inner {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.home__top__image {
+  margin-right: 20px;
+}
+
+.home__top__link {
+  margin: 0;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 33px;
+  text-decoration: none;
+  color: #19202c;
+}
+
+  .home__top__link:hover {
+    text-decoration: underline;
+}
+
+
+.home__recommended__title {
+  margin: 0;
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 33px;
+  color: #19202c;
+}
+
+.home__recommended {
+  margin-bottom: 50px;
+}
+
+  .home__recommended .post {
+    max-width: 540px;
+    flex-shrink: 0;
+  }
+
+  .post__image {
+    width: 100%;
+    height: 250px;
+  }
+
+
+
+.App--dark .home__top__link {
+    color: #ffffff;
+  }
+
+  .App--dark .home__recommended__title {
+    color: #ffffff;
+  }
+

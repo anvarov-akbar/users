@@ -1,41 +1,112 @@
-.App {
-  text-align: center;
+
+
+@font-face {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./Assets/Fonts/Mulish/mulish-v10-latin_cyrillic-regular.woff2") format("woff2"),
+    url("./Assets/Fonts/Mulish/mulish-v10-latin_cyrillic-regular.woff") format("woff");
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+@font-face {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./Assets/Fonts/Mulish/mulish-v10-latin_cyrillic-700.woff2") format("woff2"),
+    url("./Assets/Fonts/Mulish/mulish-v10-latin_cyrillic-700.woff") format("woff");
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html {
+  height: 100%;
+  box-sizing: border-box;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  scroll-behavior: smooth;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+body {
+  height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  font-family: "Mulish", "Arial", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+  padding: 0;
+  overflow-x: overlay;
+}
+  body::-webkit-scrollbar {
+    display: none;
+  }
+
+
+#root {
+  height: inherit;
 }
 
-.App-link {
-  color: #61dafb;
+button,
+input {
+  font-family: "Mulish", "Arial", sans-serif;
+  -webkit-tap-highlight-color: transparent;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+img {
+  display: block;
+  object-fit: cover;
+}
+
+main {
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 100%;
+  width: 100%;
+  padding-right: 70px;
+  padding-left: 80px;
+}
+
+.main {
+  display: flex;
+  max-height: calc(100% - 94px);
+  padding-left: 0;
+}
+
+.App {
+  height: inherit;
+  color: $heading-color-light;
+  background-color: $bg-color-light;
+}
+  .App--dark {
+    color: $heading-color-dark;
+    background-color: $bg-color-dark;
   }
-  to {
-    transform: rotate(360deg);
+
+
+@media only screen and(max-width: 768px) {
+  .main{
+    height: inherit;
   }
 }
+
 .form{
   display: flex;
   flex-direction: column;
@@ -47,12 +118,14 @@
 .password__input{
   margin: 0;
   margin-top: 10px;
+  margin-bottom: 20px;
   padding: 20px;
   font-weight: bold;
   border: none;
   border-radius: 10px;
-  background-color: #282c34;
-  color: #61dafb;
+  border: 1px solid blue;
+  background-color: #ffffff;
+  color: #0a1b1f;
 }
 .email__input{
   margin: 0;
@@ -62,26 +135,8 @@
   font-weight: bold;
   border: none;
   border-radius: 10px;
-  background-color: #282c34;
-  color: #61dafb;
+  border: 1px solid blue;
+  background-color: #f4f8ff;
+  color: #114a5a;
 }
 
-.btn__submit{
-  max-width: 150px;
-  width: 100%;
-  margin: 0;
-  margin-top: 20px;
-  padding: 20px;
-  font-weight: bold;
-  font-size: 18px;
-  border: none;
-  border-radius: 10px;
-  background-color: cyan;
-  color: #282c34;
-}
-.btn__submit:hover{
-  background-color: #282c34;
-  color: aqua;
-  transition: background-color 2s, color 3s,box-shadow 3s;
-  box-shadow: 10px 10px 5px 5px aqua;
-}
